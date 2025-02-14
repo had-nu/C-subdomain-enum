@@ -1,6 +1,6 @@
 #include "subenum.h"
 
-int check_subdomains(const char *domain, const char *subdomain)
+int ft_check_subdomains(const char *domain, const char *subdomain)
 {
 	struct 	addrinfo hints, *res;
 	char	full_domain[256];
@@ -21,12 +21,12 @@ int check_subdomains(const char *domain, const char *subdomain)
 	return (0);
 }
 
-char **read_wordlist(const char *filename, int *count)
+char **ft_read_wordlist(const char *filename, int *count)
 {
 	FILE *file = fopen(filename, "r");
 	if (!file)
 	{
-		perror("Erro ao abrir arquivo");
+		perror("Error opening file");
 		exit(EXIT_FAILURE);
 	}
 
@@ -38,12 +38,25 @@ char **read_wordlist(const char *filename, int *count)
 	{
 		buffer[strcspn(buffer, "\n")] = 0;
 
-		words = realloc(words, (*count + 1) * sizeof(char *));
+		char **temp = realloc(words, (*count + 1) * sizeof(char *));
+    	if (temp == NULL)
+    	{
+    		printf("Error reallocating memory!\n");
+    		exit(1);
+    	}
+    	words = temp;
+		
 		words[*count] = malloc(strlen(buffer) + 1);
 		strcpy(words[*count], buffer);
 
 		(*count)++;
 	}
 	fclose(file);
+
+	if (*count == 0)
+	{
+        fprintf(stderr, "Error: Empty file or has no valid words.\n");
+        return NULL;
+    }
 	return (words);
 }

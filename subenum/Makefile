@@ -1,4 +1,4 @@
-CC = gcc
+CC = cc
 CFLAGS = -Iheaders -Wall -Wextra -Werror -g
 DEPS = headers/subenum.h
 OBJ = src/main.o src/subenum.o

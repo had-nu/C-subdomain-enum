@@ -12,8 +12,8 @@
 #include <arpa/inet.h>
 #include <time.h>
 
-int	check_subdomain(const char *domain, const char *subdomain);
+int		ft_check_subdomains(const char *domain, const char *subdomain);
 
-char	**read_wordlist(const char *filename, int *count);
+char	**ft_read_wordlist(const char *filename, int *count);
 
 #endif

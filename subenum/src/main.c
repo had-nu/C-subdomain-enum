@@ -1,8 +1,8 @@
 #include "subenum.h"
 
-int check_subdomains(const char *domain, const char *subdomain);
+int ft_check_subdomains(const char *domain, const char *subdomain);
 
-char **read_wordlist(const char *filename, int *count);
+char **ft_read_wordlist(const char *filename, int *count);
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	int		count;
 	int		valid = 0;
-	char	**words = read_wordlist(argv[2], &count);
+	char	**words = ft_read_wordlist(argv[2], &count);
 
 	printf("[*] Verificando %d subdomains...\n", count);
 
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
 	for (int i = 0; i < count; i++)
 	{
-		if (check_subdomains(argv[1], words[i]))
+		if (ft_check_subdomains(argv[1], words[i]))
 		{
 			valid++;
 			printf(GREEN "[+] " RESET "%s.%s\n", words[i], argv[1]);
