@@ -3,3 +3,5 @@ mail
 docs
 drive
 maps
+admin
+sex
