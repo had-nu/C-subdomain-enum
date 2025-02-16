@@ -73,11 +73,10 @@ Sample output:
 
 ## 🛠️ Makefile Targets
 
-|**Command**	|	      **Description**        |
-+---------------+--------------------------------+
-|make		    |         Compiles project       |
-+---------------+--------------------------------+
-|make clean 	| Removes object files and binary|
+| **Command**   | **Description**                |
+|---------------|--------------------------------|
+| `make`        | Compiles the project           |
+| `make clean`  | Removes object files and binary|
 
 ## 🤝 Contribution
 
