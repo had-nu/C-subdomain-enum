@@ -1,6 +1,6 @@
 # SubEnum - Subdomain Enumeration Tool in C
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![License](https://img.shields.io/github/license/had-nu/subenum?style=for-the-badge)
+![License](https://img.shields.io/github/license/had-nu/C-subdomain-enum?style=for-the-badge)
 
 SubEnum is a lightweight, efficient subdomain enumeration tool written in C, designed for offensive security operations and infrastructure reconnaissance.
 
