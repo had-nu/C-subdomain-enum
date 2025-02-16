@@ -14,16 +14,16 @@ SubEnum is a lightweight, efficient subdomain enumeration tool written in C, des
 
 ## 📦 Instalação
 
-# Clone repository
+### Clone repository
 ```bash
 git clone https://github.com/seu-usuario/subenum.git
 cd subenum
 ```
-# Compile project
+### Compile project
 ```bash
 make
 ```
-# Create sample wordlist
+### Create sample wordlist
 ```bash
 echo -e "www\nmail\nftp\nadmin\nteste" > wordlist.txt
 ```
@@ -58,23 +58,26 @@ Sample output:
 **Main Components**
 
 1. subenum.h
-    Colour macros
-    Function declarations
-    Library includes
+	- Colour macros
+	- Function declarations
+	- Library includes
 
 2. subenum.c
-    ft_check_subdomains(): Verifies subdomain existence
-    ft_read_wordlist(): Processes wordlist files
+	- ft_check_subdomains(): Verifies subdomain existence
+	- ft_read_wordlist(): Processes wordlist files
 
 3. main.c
-    Core program logic
-    Execution timing
-    Output management
+	- Core program logic
+    - Execution timing
+    - Output management
 
 ## 🛠️ Makefile Targets
-**Command**		   **Description**
-make		-> Compiles project
-make clean 	-> Removes object files and binary
+
+|**Command**	|	      **Description**        |
++---------------+--------------------------------+
+|make		    |         Compiles project       |
++---------------+--------------------------------+
+|make clean 	| Removes object files and binary|
 
 ## 🤝 Contribution
 
