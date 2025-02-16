@@ -17,7 +17,7 @@ int ft_check_subdomains(const char *domain, const char *subdomain)
 		freeaddrinfo(res);
 		return (1);
 	}
-	printf("Falha na resolução: %s (%d)\n", full_domain, result);
+	printf("Resolution failed: %s (%d)\n", full_domain, result);
 	return (0);
 }
 

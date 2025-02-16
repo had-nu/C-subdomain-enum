@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 	clock_t init = clock();
 	if (argc != 3)
 	{
-		printf("Uso: %s <domain> <wordlist>\n", argv[0]);
+		printf("Usage: %s <domain> <wordlist>\n", argv[0]);
 		return (1);
 	}
 
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	int		valid = 0;
 	char	**words = ft_read_wordlist(argv[2], &count);
 
-	printf("[*] Verificando %d subdomains...\n", count);
+	printf("[*] Verifying %d subdomains...\n", count);
 
 	double time = (double)(clock() - init) / CLOCKS_PER_SEC;
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		free(words[i]);
 	}
 	free(words);
-	printf("\n[*] Total de subdominios validos: %d/%d", valid, count);
-	printf("\n[*] Tempo de execução: %.2f segundos\n", time);
+	printf("\n[*] Total valid subdomains: %d/%d", valid, count);
+	printf("\n[*] Execution time: %.2f segundos\n", time);
 	return (0);
 }

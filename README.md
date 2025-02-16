@@ -2,48 +2,47 @@
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 ![GitHub](https://img.shields.io/github/license/seu-usuario/subenum?style=for-the-badge)
 
-SubEnum é uma ferramenta leve e eficiente para enumeração de subdomínios escrita em C, projetada para operações de segurança ofensiva e reconhecimento de infraestrutura.
+SubEnum is a lightweight, efficient subdomain enumeration tool written in C, designed for offensive security operations and infrastructure reconnaissance.
 
 ## ✨ Features
 
-- Leitura de wordlists para teste de subdomínios
-- Resolução DNS rápida usando `getaddrinfo()`
-- Saída colorida para melhor visualização
-- Medição de tempo de execução
-- Gerenciamento seguro de memória
-- Fácil integração em pipelines de segurança
+- Wordlist processing for subdomain testing
+- Fast DNS resolution using `getaddrinfo()`
+- Execution time measurement
+- Safe memory management
+- Easy integration into security pipelines
 
 ## 📦 Instalação
 
-# Clone o repositório
+# Clone repository
 ```bash
 git clone https://github.com/seu-usuario/subenum.git
 cd subenum
 ```
-# Compile o projeto
+# Compile project
 ```bash
 make
 ```
-# Crie uma wordlist de exemplo
+# Create sample wordlist
 ```bash
 echo -e "www\nmail\nftp\nadmin\nteste" > wordlist.txt
 ```
-## 🚀 Uso
+## 🚀 Usage
 ```bash
 ./subenum <domain> <wordlist>
 
-# Exemplo:
+# Exemple:
 ./subenum example.com wordlist.txt
 ```
 
-Saída de exemplo:
+Sample output:
 ```bash
-[*] Verificando 5 subdomains...
+[*] Checking 5 subdomains...
 [+] www.example.com
 [+] mail.example.com
 
-[*] Total de subdominios validos: 2/5
-[*] Tempo de execução: 0.0 segundos
+[*] Valid subdomains found: 2/5
+[*] Execution time: 0.00 seconds
 ```
 ## 🧠 Code Structure
 ```bash
@@ -56,52 +55,44 @@ Saída de exemplo:
 └── README.md
 ```
 
-Componentes Principais
+**Main Components**
 
 1. subenum.h
-    Define macros de cores
-    Declarações de funções
-    Includes de bibliotecas
+    Colour macros
+    Function declarations
+    Library includes
 
 2. subenum.c
-    ft_check_subdomains(): Verifica a existência de subdomínios
-    ft_read_wordlist(): Processa arquivos de wordlist
+    ft_check_subdomains(): Verifies subdomain existence
+    ft_read_wordlist(): Processes wordlist files
 
 3. main.c
-    Lógica principal do programa
-    Medição de tempo de execução
-    Gerenciamento de saída
+    Core program logic
+    Execution timing
+    Output management
 
 ## 🛠️ Makefile Targets
-**Comando**		   **Descrição**
-make		-> Compila o projeto
-make clean 	-> Remove arquivos objetos e binários
+**Command**		   **Description**
+make		-> Compiles project
+make clean 	-> Removes object files and binary
 
-## 🤝 Contribuição
+## 🤝 Contribution
 
-Contribuições são bem-vindas! Por favor:
+Contributions welcome! Please:
 
-1. Abra uma issue para discutir a mudança proposta;
-2. Faça fork do repositório;
-3. Crie um branch com sua feature `(git checkout -b feature/awesome-feature)`;
-4. Commit suas mudanças `(git commit -m 'Add awesome feature')`;
-5. Push para o branch `(git push origin feature/awesome-feature)`;
-6. Abra um Pull Request.
+1. Open an issue to discuss proposed changes;
+2. Fork the repository;
+3. Create feature branch `(git checkout -b feature/awesome-feature)`;
+4. Commit changes `(git commit -m 'Add awesome feature')`;
+5. Push branch `(git push origin feature/awesome-feature)`;
+6. Open Pull Request.
 
-## 📄 Licença
+## 📄 Licence
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
+This project is licensed under the MIT Licence - see LICENCE file for details.
 
-## 🙌 Reconhecimentos
+## 🙌 Acknowledgements
 
-1. Inspirado em ferramentas como Sublist3r e Amass
-2. Utiliza técnicas padrão de resolução DNS
-3. Código otimizado para performance
-
-
-**Notas para personalização:**
-1. Substitua `seu-usuario` pelo seu nome de usuário do GitHub
-2. Adicione uma licença real no arquivo LICENSE
-3. Inclua badges adicionais relevantes
-4. Adicione uma seção de roadmap se desejar
-5. Inclua informações de contato para relatórios de segurança
+1. Inspired by tools like Sublist3r and Amass
+2. Uses standard DNS resolution techniques
+3. Code optimised for performance
