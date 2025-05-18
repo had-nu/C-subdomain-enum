@@ -16,8 +16,8 @@ SubEnum is a lightweight, efficient subdomain enumeration tool written in C, des
 
 ### Clone repository
 ```bash
-git clone https://github.com/had-nu/subenum.git
-cd subenum
+git clone https://github.com/had-nu/C-subdomain-enum.git
+cd C-subdomain-enum
 ```
 ### Compile project
 ```bash
@@ -29,7 +29,7 @@ echo -e "www\nmail\nftp\nadmin\nteste" > wordlist.txt
 ```
 ## 🚀 Usage
 ```bash
-./subenum <domain> <wordlist>
+./C-subdomain-enum <domain> <wordlist>
 
 # Exemple:
 ./subenum example.com wordlist.txt
